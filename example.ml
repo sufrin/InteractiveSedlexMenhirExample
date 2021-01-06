@@ -9,11 +9,11 @@ let process lexbuf =
         (match ast with Sexp.EndFile -> raise EndFile | _ -> ());
         Format.fprintf Format.std_formatter "%a\n%!" Sexp.pp_sexp ast
       | ERR (pos, msg) ->  
-        Format.fprintf Format.err_formatter "*** %a %s%!"   Sexp.pp_fpos pos msg
+        Format.fprintf Format.std_formatter "*** %a %s%!"   Sexp.pp_fpos pos msg
   with 
      (* abandon the current phrase on a lexer error *)
      SexpLexer.LexError (pos, msg) ->
-         Format.fprintf Format.err_formatter "*** Lexing error: %s at %a\n%!" msg Sexp.pp_pos pos
+         Format.fprintf Format.std_formatter "*** Lexing error: %s at %a\n%!" msg Sexp.pp_pos pos
 
 let _ =
     let chan   = open_in "/dev/stdin" in
@@ -27,6 +27,7 @@ let _ =
     with
      EndFile -> ()
       
+
 
 
 

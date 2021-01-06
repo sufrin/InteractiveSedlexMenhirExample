@@ -18,7 +18,7 @@ let octal_ascii   = [%sedlex.regexp? "0o", Plus ('0' .. '7')]
 
 let hex_ascii     = [%sedlex.regexp? "0x", Plus (('0' .. '9' | 'a' .. 'f' | 'A' .. 'F'))]
 
-let idChunk       = [%sedlex.regexp? Compl (' ' | '\t' | '\n' | '\r' | '(' | ')' | '-' | '+' | '@' | '.' | '"') ]
+let idChunk       = [%sedlex.regexp? Compl (' ' | '\t' | '\n' | '\r' | '(' | ')' | '-' | '+' | '@' | '.' | '"' | ';') ]
 
 let stringChunk   = [%sedlex.regexp? Star (Compl ('"' | '\\' | '\n'))]
 
@@ -48,6 +48,12 @@ let string buf  =
     and ins s buf = Buffer.add_string buffer s; read_string buf
   in
     read_string buf
+    
+let comment echo buf =
+    match%sedlex buf with
+    | Star(Compl newline), newline -> if echo then Format.fprintf Format.std_formatter "%s%!" (Utf8.lexeme buf) else ()
+    | _                            -> assert false
+     
 
 let digit_value c =
   let open Stdlib in
@@ -67,11 +73,13 @@ let num_value buffer ~base ~first =
   done;
   !c
 
-let token buf =
+let rec token buf =
   skipWhitespace buf; 
   match%sedlex buf with
   | eof -> EOF
   | "@" -> AT
+  | ";;;-" -> comment true  buf; token buf
+  | ';'    -> comment false buf; token buf
   | '-' -> MINUS
   | '+' -> PLUS
   | '.' -> DOT
@@ -97,6 +105,7 @@ let token buf =
 
 let lexer buf =
   Sedlexing.with_tokenizer token buf
+
 
 
 

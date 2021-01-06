@@ -7,44 +7,44 @@ let message =
   fun s ->
     match s with
     | 51 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<+ should be followed by a number>\n"
     | 3 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<- should be followed by a number>\n"
     | 0 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<Unexpected )>\n"
     | 17 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<Unexpected EOF>\n"
     | 15 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<+ should be followed by a number>\n"
     | 9 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<- should be followed by a number>\n"
     | 7 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<Unexpected EOF>\n"
     | 40 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<Misplaced .>\n"
     | 38 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<Misplaced .>\n"
     | 24 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<Misplaced .>\n"
     | 22 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<Misplaced .>\n"
     | 27 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<Misplaced .>\n"
     | 30 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<Misplaced .>\n"
     | 36 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<Misplaced .>\n"
     | 46 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<Misplaced .>\n"
     | 34 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<Spurious . after .>\n"
     | 12 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<EOF in list>\n"
     | 21 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<Misplaced .>\n"
     | 13 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<@ should be followed by an sexpr>\n"
     | 49 ->
-        "<YOUR SYNTAX ERROR MESSAGE HERE>\n"
+        "<@ should be followed by an sexpr>\n"
     | _ ->
         raise Not_found

@@ -1,0 +1,47 @@
+EXCLUDE_QUERY_DIR
+B /Users/sufrin/.opam/default/lib/bytes
+B /Users/sufrin/.opam/default/lib/gen
+B /Users/sufrin/.opam/default/lib/menhirLib
+B /Users/sufrin/.opam/default/lib/ocaml
+B /Users/sufrin/.opam/default/lib/ocaml-compiler-libs/common
+B /Users/sufrin/.opam/default/lib/ocaml-compiler-libs/shadow
+B /Users/sufrin/.opam/default/lib/ocaml-migrate-parsetree
+B /Users/sufrin/.opam/default/lib/ocaml/compiler-libs
+B /Users/sufrin/.opam/default/lib/ppx_derivers
+B /Users/sufrin/.opam/default/lib/ppx_deriving
+B /Users/sufrin/.opam/default/lib/ppx_deriving/runtime
+B /Users/sufrin/.opam/default/lib/ppxlib
+B /Users/sufrin/.opam/default/lib/ppxlib/ast
+B /Users/sufrin/.opam/default/lib/ppxlib/print_diff
+B /Users/sufrin/.opam/default/lib/ppxlib/stdppx
+B /Users/sufrin/.opam/default/lib/ppxlib/traverse_builtins
+B /Users/sufrin/.opam/default/lib/result
+B /Users/sufrin/.opam/default/lib/sedlex
+B /Users/sufrin/.opam/default/lib/sexplib0
+B /Users/sufrin/.opam/default/lib/stdlib-shims
+B /Users/sufrin/.opam/default/lib/uchar
+B _build/default/.example.eobjs/byte
+S /Users/sufrin/.opam/default/lib/bytes
+S /Users/sufrin/.opam/default/lib/gen
+S /Users/sufrin/.opam/default/lib/menhirLib
+S /Users/sufrin/.opam/default/lib/ocaml
+S /Users/sufrin/.opam/default/lib/ocaml-compiler-libs/common
+S /Users/sufrin/.opam/default/lib/ocaml-compiler-libs/shadow
+S /Users/sufrin/.opam/default/lib/ocaml-migrate-parsetree
+S /Users/sufrin/.opam/default/lib/ocaml/compiler-libs
+S /Users/sufrin/.opam/default/lib/ppx_derivers
+S /Users/sufrin/.opam/default/lib/ppx_deriving
+S /Users/sufrin/.opam/default/lib/ppx_deriving/runtime
+S /Users/sufrin/.opam/default/lib/ppxlib
+S /Users/sufrin/.opam/default/lib/ppxlib/ast
+S /Users/sufrin/.opam/default/lib/ppxlib/print_diff
+S /Users/sufrin/.opam/default/lib/ppxlib/stdppx
+S /Users/sufrin/.opam/default/lib/ppxlib/traverse_builtins
+S /Users/sufrin/.opam/default/lib/result
+S /Users/sufrin/.opam/default/lib/sedlex
+S /Users/sufrin/.opam/default/lib/sexplib0
+S /Users/sufrin/.opam/default/lib/stdlib-shims
+S /Users/sufrin/.opam/default/lib/uchar
+S .
+FLG -ppx '/Users/sufrin/GitHomes/InteractiveSedlexMenhirExample/_build/default/.ppx/1ad8dbdf7f62248718944546b8abffc0/ppx.exe --as-ppx'
+FLG -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A

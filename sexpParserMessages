@@ -8,7 +8,7 @@ sexp: AT KET
 ## AT
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<@ should be followed by an sexpr>
 
 sexp: BRA AT KET
 ##
@@ -20,7 +20,7 @@ sexp: BRA AT KET
 ## AT
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<@ should be followed by an sexpr>
 
 sexp: BRA BRA DOT KET
 ##
@@ -32,7 +32,7 @@ sexp: BRA BRA DOT KET
 ## BRA list(sexpr) DOT
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<Misplaced .>
 
 sexp: BRA BRA EOF
 ##
@@ -45,7 +45,7 @@ sexp: BRA BRA EOF
 ## BRA
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<EOF in list>
 
 sexp: BRA DOT DOT KET
 ##
@@ -57,7 +57,7 @@ sexp: BRA DOT DOT KET
 ## list(sexpr) DOT
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<Spurious . after .>
 
 sexp: BRA DOT KET
 ##
@@ -69,7 +69,7 @@ sexp: BRA DOT KET
 ## BRA list(sexpr) DOT
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<Misplaced .>
 
 sexp: BRA DOT STRING AT KET
 ##
@@ -81,7 +81,7 @@ sexp: BRA DOT STRING AT KET
 ## AT
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<Misplaced .>
 
 sexp: BRA DOT STRING BRA DOT KET
 ##
@@ -93,7 +93,7 @@ sexp: BRA DOT STRING BRA DOT KET
 ## BRA list(sexpr) DOT
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<Misplaced .>
 
 sexp: BRA DOT STRING BRA EOF
 ##
@@ -106,7 +106,7 @@ sexp: BRA DOT STRING BRA EOF
 ## BRA
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<Misplaced .>
 
 sexp: BRA DOT STRING EOF
 ##
@@ -119,7 +119,7 @@ sexp: BRA DOT STRING EOF
 ## sexpr
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<Misplaced .>
 
 sexp: BRA DOT STRING MINUS STRING
 ##
@@ -131,7 +131,7 @@ sexp: BRA DOT STRING MINUS STRING
 ## MINUS
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<Misplaced .>
 
 sexp: BRA DOT STRING PLUS STRING
 ##
@@ -143,7 +143,7 @@ sexp: BRA DOT STRING PLUS STRING
 ## option(PLUS)
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<Misplaced .>
 
 sexp: BRA DOT STRING STRING KET
 ##
@@ -155,7 +155,7 @@ sexp: BRA DOT STRING STRING KET
 ## sexpr
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<Misplaced .>
 
 sexp: BRA EOF
 ##
@@ -168,7 +168,7 @@ sexp: BRA EOF
 ## BRA
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<Unexpected EOF>
 
 sexp: BRA MINUS STRING
 ##
@@ -180,7 +180,7 @@ sexp: BRA MINUS STRING
 ## MINUS
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<- should be followed by a number>
 
 sexp: BRA PLUS STRING
 ##
@@ -192,7 +192,7 @@ sexp: BRA PLUS STRING
 ## option(PLUS)
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<+ should be followed by a number>
 
 sexp: BRA STRING EOF
 ##
@@ -204,7 +204,7 @@ sexp: BRA STRING EOF
 ## sexpr
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<Unexpected EOF>
 
 sexp: KET
 ##
@@ -216,7 +216,7 @@ sexp: KET
 ##
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<Unexpected )>
 
 sexp: MINUS STRING
 ##
@@ -228,7 +228,7 @@ sexp: MINUS STRING
 ## MINUS
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<- should be followed by a number>
 
 sexp: PLUS ID
 ##
@@ -240,5 +240,6 @@ sexp: PLUS ID
 ## option(PLUS)
 ##
 
-<YOUR SYNTAX ERROR MESSAGE HERE>
+<+ should be followed by a number>
+
 
