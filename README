@@ -5,10 +5,10 @@ and lexer using sedlex and menhir. The parser runs interactively
 when connected to a terminal. It is intended ONLY to serve as
 an example of the use of sedlex and menhir, but may be helpful 
 if you need an uncomplicated parser for S-expressions that can 
-be parse them efficiently both interactively from terminals 
+parse them efficiently both interactively from terminals 
 as well as from files.
 
-To construct the parser, the lexer and and example of their use:
+To construct the parser, the lexer, and an example of their use:
 
         dune build example.exe
 
@@ -91,3 +91,4 @@ ml:    Generates the sexpParserMessages.ml source file from the
          
          
          
+
