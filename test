@@ -1,0 +1,37 @@
+"Examples of dot-free sexpressions"
+
+(the rain in
+        (spain falls)
+        (mainly in the (plain)))
+       
+(foo () baz is best)
+
+"An example to show an @-expression"
+(spain @falls)
+
+"An example of a string with an embedded source newline in it:\n\
+\ erroneous; followed by some spurious parsings"
+"An example of a string with an embedded source newline
+in it: erroneous"
+
+
+"There now follow some examples\n\
+\of the parsing of expressions with dots present"
+
+"result: (a.b)"
+(a.b)
+"result: ((a b c) . d)"
+(a b c . d)
+"result: from (a.b c d) is syntax error"
+(a.b c d)
+"result: from (a b . c d) is syntax error"
+(a b . c d)
+"result: (a . ((b c d) . e))"
+(a.b c d.e)
+"the list (this is -foo closed): result:\n\
+\ Number expected, then closed parsed, then ) unexpected"
+(this is -foo closed)
+"an over closed list: unexpected )"
+(this is over closed))
+"and finally: an unclosed list at eof: erroneous"
+(this is the way

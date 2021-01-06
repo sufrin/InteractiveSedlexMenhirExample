@@ -1,0 +1,93 @@
+AN S-EXPRESSION PARSER built with Sedlex and Menhir
+
+This is an example of the construction of an error-reporting parser 
+and lexer using sedlex and menhir. The parser runs interactively
+when connected to a terminal. It is intended ONLY to serve as
+an example of the use of sedlex and menhir, but may be helpful 
+if you need an uncomplicated parser for S-expressions that can 
+be parse them efficiently both interactively from terminals 
+as well as from files.
+
+To construct the parser, the lexer and and example of their use:
+
+        dune build example.exe
+
+EFFICIENT INTERACTIVE LEXING 
+
+The supplied sedlexing.{ml,mli} have been adapted so that the lexer
+can be made to respond /immediately/ to characters appearing on the
+input channel, when the channel is connected to a terminal, yet can
+run efficiently (without recourse to the operating system for every
+single input character) when connected to a file.
+
+Such a lexer is constructed from a lexbuf made from a channel that 
+can be tested to see if it's a tty.
+
+    let chan   = open_in "/dev/stdin" in
+    let istty  = Unix.isatty @@ Unix.descr_of_in_channel chan in
+    let lexbuf = Sedlexing.Utf8.from_channel ~chunk_size:(if istty then 1 else 1024) chan in
+    Sedlexing.set_filename lexbuf "/dev/stdin";
+    if istty then
+       Sedlexing.set_prompter lexbuf (fun () -> Format.printf "> %!");
+
+[NB: the standard sedlexing.{ml,mli} can also be used as per other
+published examples and their documentation, but in this case the lexer
+responds to input only when the end-of-file key is pressed at the terminal.
+This is because the "chunk-size" for refilling the standard form of 
+buffer is constant (512), and the refilling loop requires an eof
+before it terminates.] 
+
+UPDATING ERROR MESSAGES
+
+The supplied sources are all up to date wrt. the grammar file sexpParser.mly
+
+The Makefile has four /consequential/ targets.
+
+diff:  generates sexpParserMessages.new and runs a diff between it and
+       the existing sexpParserMessages. This is the default target, invoked
+       on make.
+       
+       *   If no differences are reported then there is no need
+           for further action.
+
+       *   If there are differences only in state numbers, then
+           there is no need for further action.
+       
+       If there is a difference that contains something like
+       
+              <YOUR SYNTAX ERROR MESSAGE HERE>
+              
+       then you will need to edit the .new file to change such
+       generic messages into concrete descriptions of the error.
+       
+       When you have done so, then 
+       
+                make cp
+                
+       to copy the .new file to the sexpParserMessages file, then
+       
+                make ml
+                
+       to generate source file sexpParserMessages.ml 
+       
+new:   Generates sexpParserMessages.new incrementally from
+       sexpParserMessages and sexpParser.mly
+       
+       The .new file may need editing to bring its error
+       messages up to date with the parser specification
+       (see the diff target)
+       
+raw:   Generates sexpParserMessages.raw ab-initio from sexpParser.mly
+       
+       The .raw file will certainly need editing to bring its error
+       messages up to date with the parser specification. 
+       
+ml:    Generates the sexpParserMessages.ml source file from the 
+       parser specification and the messages file.       
+        
+       
+        
+         
+         
+         
+         

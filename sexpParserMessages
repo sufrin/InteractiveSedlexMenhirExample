@@ -1,0 +1,244 @@
+sexp: AT KET
+##
+## Ends in an error in state: 49.
+##
+## sexpr -> AT . sexpr [ # ]
+##
+## The known suffix of the stack is as follows:
+## AT
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: BRA AT KET
+##
+## Ends in an error in state: 13.
+##
+## sexpr -> AT . sexpr [ STRING PLUS MINUS KET INT ID DOT BRA AT ]
+##
+## The known suffix of the stack is as follows:
+## AT
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: BRA BRA DOT KET
+##
+## Ends in an error in state: 21.
+##
+## sexpr -> BRA list(sexpr) DOT . pairs KET [ STRING PLUS MINUS KET INT ID DOT BRA AT ]
+##
+## The known suffix of the stack is as follows:
+## BRA list(sexpr) DOT
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: BRA BRA EOF
+##
+## Ends in an error in state: 12.
+##
+## sexpr -> BRA . list(sexpr) KET [ STRING PLUS MINUS KET INT ID DOT BRA AT ]
+## sexpr -> BRA . list(sexpr) DOT pairs KET [ STRING PLUS MINUS KET INT ID DOT BRA AT ]
+##
+## The known suffix of the stack is as follows:
+## BRA
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: BRA DOT DOT KET
+##
+## Ends in an error in state: 34.
+##
+## pairs -> list(sexpr) DOT . pairs [ KET ]
+##
+## The known suffix of the stack is as follows:
+## list(sexpr) DOT
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: BRA DOT KET
+##
+## Ends in an error in state: 46.
+##
+## sexpr -> BRA list(sexpr) DOT . pairs KET [ # ]
+##
+## The known suffix of the stack is as follows:
+## BRA list(sexpr) DOT
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: BRA DOT STRING AT KET
+##
+## Ends in an error in state: 36.
+##
+## sexpr -> AT . sexpr [ STRING PLUS MINUS INT ID DOT BRA AT ]
+##
+## The known suffix of the stack is as follows:
+## AT
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: BRA DOT STRING BRA DOT KET
+##
+## Ends in an error in state: 30.
+##
+## sexpr -> BRA list(sexpr) DOT . pairs KET [ STRING PLUS MINUS INT ID DOT BRA AT ]
+##
+## The known suffix of the stack is as follows:
+## BRA list(sexpr) DOT
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: BRA DOT STRING BRA EOF
+##
+## Ends in an error in state: 27.
+##
+## sexpr -> BRA . list(sexpr) KET [ STRING PLUS MINUS INT ID DOT BRA AT ]
+## sexpr -> BRA . list(sexpr) DOT pairs KET [ STRING PLUS MINUS INT ID DOT BRA AT ]
+##
+## The known suffix of the stack is as follows:
+## BRA
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: BRA DOT STRING EOF
+##
+## Ends in an error in state: 22.
+##
+## list(sexpr) -> sexpr . list(sexpr) [ DOT ]
+## pairs -> sexpr . [ KET ]
+##
+## The known suffix of the stack is as follows:
+## sexpr
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: BRA DOT STRING MINUS STRING
+##
+## Ends in an error in state: 24.
+##
+## sexpr -> MINUS . INT [ STRING PLUS MINUS INT ID DOT BRA AT ]
+##
+## The known suffix of the stack is as follows:
+## MINUS
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: BRA DOT STRING PLUS STRING
+##
+## Ends in an error in state: 38.
+##
+## sexpr -> option(PLUS) . INT [ STRING PLUS MINUS INT ID DOT BRA AT ]
+##
+## The known suffix of the stack is as follows:
+## option(PLUS)
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: BRA DOT STRING STRING KET
+##
+## Ends in an error in state: 40.
+##
+## list(sexpr) -> sexpr . list(sexpr) [ DOT ]
+##
+## The known suffix of the stack is as follows:
+## sexpr
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: BRA EOF
+##
+## Ends in an error in state: 7.
+##
+## sexpr -> BRA . list(sexpr) KET [ # ]
+## sexpr -> BRA . list(sexpr) DOT pairs KET [ # ]
+##
+## The known suffix of the stack is as follows:
+## BRA
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: BRA MINUS STRING
+##
+## Ends in an error in state: 9.
+##
+## sexpr -> MINUS . INT [ STRING PLUS MINUS KET INT ID DOT BRA AT ]
+##
+## The known suffix of the stack is as follows:
+## MINUS
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: BRA PLUS STRING
+##
+## Ends in an error in state: 15.
+##
+## sexpr -> option(PLUS) . INT [ STRING PLUS MINUS KET INT ID DOT BRA AT ]
+##
+## The known suffix of the stack is as follows:
+## option(PLUS)
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: BRA STRING EOF
+##
+## Ends in an error in state: 17.
+##
+## list(sexpr) -> sexpr . list(sexpr) [ KET DOT ]
+##
+## The known suffix of the stack is as follows:
+## sexpr
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: KET
+##
+## Ends in an error in state: 0.
+##
+## sexp' -> . sexp [ # ]
+##
+## The known suffix of the stack is as follows:
+##
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: MINUS STRING
+##
+## Ends in an error in state: 3.
+##
+## sexpr -> MINUS . INT [ # ]
+##
+## The known suffix of the stack is as follows:
+## MINUS
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+sexp: PLUS ID
+##
+## Ends in an error in state: 51.
+##
+## sexpr -> option(PLUS) . INT [ # ]
+##
+## The known suffix of the stack is as follows:
+## option(PLUS)
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+

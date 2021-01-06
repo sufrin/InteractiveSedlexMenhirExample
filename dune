@@ -1,0 +1,10 @@
+(executable
+  (name example)
+  (libraries   unix menhirLib sedlex ppxlib ppx_deriving)
+  (preprocess (pps sedlex.ppx ppx_deriving.std))
+)
+
+(menhir (flags --table --canonical) (modules sexpParser))
+
+(env (dev (flags (:standard -warn-error -A))))
+
